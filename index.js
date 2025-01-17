@@ -1,8 +1,10 @@
 import express, { json } from 'express';
 import { connect } from 'mongoose';
-import userRoutes from './routes/user.routes';
-import profileRoutes from './routes/profile.routes';
-require('dotenv').config();
+import { config } from 'dotenv';
+import userRoutes from './routes/user.routes.js';
+import profileRoutes from './routes/profile.routes.js';
+
+config();
 
 const app = express();
 const port = process.env.PORT || 3000;

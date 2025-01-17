@@ -1,7 +1,7 @@
-import User, { findOne } from '../models/user';
-import { sign } from 'jsonwebtoken';
+import User from '../models/user.js';
+import pkg from 'jsonwebtoken';
+const { sign } = pkg;
 
-// ...existing code...
 
 export async function register(req, res) {
     try {
@@ -17,7 +17,7 @@ export async function register(req, res) {
 export async function login(req, res) {
     try {
         const { username, password } = req.body;
-        const user = await findOne({ username });
+        const user = await user.findOne({ username });
         if (!user) {
             return res.status(400).json({ message: 'Invalid username or password' });
         }

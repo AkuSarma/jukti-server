@@ -1,6 +1,6 @@
 import { Router } from 'express';
 const router = Router();
-import { createStudentProfile, getStudentProfile, createOwnerProfile, getOwnerProfile } from '../controller/profile.controller';
+import { createStudentProfile, getStudentProfile, createOwnerProfile, getOwnerProfile } from '../controller/profile.controller.js';
 
 
 // Routes for student profiles

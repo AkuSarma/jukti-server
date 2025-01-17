@@ -1,6 +1,6 @@
-import StudentProfile from '../models/studentProfile';
-import OwnerProfile from '../models/ownerProfile';
-import User from '../models/user';
+import StudentProfile from '../models/studentProfile.js';
+import OwnerProfile from '../models/ownerProfile.js';
+import User from '../models/user.js';
 
 // Create student profile
 export async function createStudentProfile(req, res) {
